@@ -66,10 +66,10 @@ const MainView = {
     },
 
     async nonAlcoholicCocktail () {
-      this.resetData();
       var list = await getNonAlcoholic();
       const randomDrink = Math.floor(Math.random() * list.length);
       const drink = await getCocktailById(list[randomDrink].idDrink);
+      this.resetData();
       this.cocktailsList.push(drink);
     },
 
