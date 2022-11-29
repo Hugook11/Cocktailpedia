@@ -70,7 +70,7 @@ const MainView = {
       const randomDrink = Math.floor(Math.random() * list.length);
       const drink = await getCocktailById(list[randomDrink].idDrink);
       this.resetData();
-      this.cocktailsList.push(drink);
+      this.cocktailsList = drink;
     },
 
     async cocktailsByIngredient (ingredient) {
